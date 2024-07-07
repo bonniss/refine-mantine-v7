@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "refine dev",
+    "build": "tsc && refine build",
+    "preview": "refine start",
     "typecheck": "tsc --noEmit",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
     "lint:eslint": "eslint . --ext .ts,.tsx --cache",
@@ -33,6 +33,7 @@
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
+    "@refinedev/cli": "^2.16.36",
     "@storybook/addon-essentials": "^8.1.10",
     "@storybook/addon-interactions": "^8.1.10",
     "@storybook/addon-links": "^8.1.10",
