@@ -1,6 +1,10 @@
-import { useLogout, useMenu } from "@refinedev/core";
-import { NavLink } from "react-router-dom";
-import classes from './menu.module.css'
+import { Button, NavLink, ScrollArea } from '@mantine/core';
+import { useLogout, useMenu } from '@refinedev/core';
+import { IconArticle, IconCategory2, IconHome2 } from '@tabler/icons-react';
+import { NavLink as RouterNavLink } from 'react-router-dom';
+import classes from './menu.module.css';
+
+const icons = [IconHome2, IconArticle, IconCategory2];
 
 export const Menu = () => {
   const { mutate: logout } = useLogout();
@@ -8,17 +12,26 @@ export const Menu = () => {
 
   return (
     <nav className={classes.root}>
-      <ul>
-        <li>
-          <NavLink to={"/"}>Home</NavLink>
-        </li>
-        {menuItems.map((item) => (
-          <li key={item.key}>
-            <NavLink to={item.route ?? "/"}>{item.label}</NavLink>
-          </li>
-        ))}
-      </ul>
-      <button onClick={() => logout()}>Logout</button>
+      <ScrollArea className={classes.links}>
+        <ul className={classes.linksInner}>
+          {[{ key: 'home', route: '/', label: 'Home' }, ...menuItems].map((item, idx) => {
+            const Icon = icons[idx];
+            return (
+              <li key={item.key}>
+                <NavLink
+                  component={RouterNavLink}
+                  to={item.route ?? '/'}
+                  label={item.label}
+                  leftSection={<Icon />}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </ScrollArea>
+      <div className={classes.footer}>
+        <Button fullWidth onClick={() => logout()} radius={0} variant="gradient">Logout</Button>
+      </div>
     </nav>
   );
 };
