@@ -1,0 +1,18 @@
+.root {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-right: 1px solid lightgray;
+
+  ul {
+    padding-left: 16px;
+  }
+
+  :global(.active) {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 751px) {
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+  }
+}

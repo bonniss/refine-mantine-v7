@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  gap: 24px;
+  list-style-type: "/  ";
+  padding: 8px 16px;
+  border-bottom: 1px solid lightgray;
+
+  a {
+    color: goldenrod;
+    text-decoration: none;
+  }
+}
+
