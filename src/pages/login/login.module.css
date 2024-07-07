@@ -1,8 +1,10 @@
 .normalizedForm {
   border-radius: var(--mantine-radius-sm);
+  background-color: light-dark(#fcfcfc, var(--mantine-color-dark-filled));
+  box-shadow: var(--mantine-shadow-xl);
 
   h1 {
-    color: light-dark(var(--mantine-color-black), var(--mantine-color-white))
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   }
 
   form > * {
@@ -14,7 +16,9 @@
     margin-top: var(--mantine-spacing-xs);
     margin-bottom: var(--mantine-spacing-lg);
     padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
-    font-size: var(--mantine-font-size-lg	);
+    font-size: var(--mantine-font-size-lg);
+    border: 1px solid var(--mantine-color-gray-5);
+    border-radius: var(--mantine-radius-sm);
   }
 
   [type=submit] {
@@ -24,10 +28,11 @@
     border: none;
     border-radius: var(--mantine-radius-sm);
     cursor: pointer;
-    background-color: var(--mantine-primary-color-8);
+    color: var(--mantine-color-white);
+    background-color: var(--mantine-primary-color-7);
 
     &:hover {
-      background-color: var(--mantine-primary-color-6);
+      background-color: var(--mantine-primary-color-5);
     }
   }
 

@@ -12,6 +12,7 @@ const defaultUser = {
 export const Login = () => {
   useEffect(() => {
     document.querySelector('h1')!.textContent = 'Refine + Mantine = ❤️‍🔥';
+    document.getElementById('email-input')?.focus();
   }, []);
 
   return (
@@ -45,7 +46,7 @@ export const Login = () => {
             )}
           </CopyButton>
         </Alert>
-        <Box className={classes.normalizedForm} px="xl" py="md" bg="gray">
+        <Box className={classes.normalizedForm} px="xl" py="md">
           <AuthPage type="login" />
         </Box>
       </Stack>

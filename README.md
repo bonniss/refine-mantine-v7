@@ -2,9 +2,15 @@
 
 Refine's Mantine integration [only supports Mantine v5](https://refine.dev/docs/ui-integrations/mantine/introduction). This template build on top of [Mantine v7 + Vite template](https://github.com/mantinedev/vite-template), adding:
 
-- Headless Refine integration (based on [this tutorial](https://github.com/refinedev/refine/tree/master/examples/tutorial-headless)).
+- Headless Refine v4 integration (based on [this tutorial](https://github.com/refinedev/refine/tree/master/examples/tutorial-headless)).
 - Sample resources of `blog-post` and `category`.
 - Mantine-ish login page.
+
+![](./public/screenshots/login.png)
+
+![](./public/screenshots/home.png)
+
+![](./public/screenshots/resource.png)
 
 ## Features
 
