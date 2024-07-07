@@ -18,13 +18,25 @@ export function Welcome() {
       </Title>
 
       <Text ta="center" size="lg" maw={580} mx="auto" my="lg">
-        Refine's Mantine integration only supports Mantine v5. This template is a starter for{' '}
-        <Text variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Refine v4
-        </Text>{' '}
-        and{' '}
-        <Text variant="gradient" component="span">
-          Mantine v7.
+        <Text c="dimmed" component="span">
+          Refine's Mantine integration{' '}
+          <Anchor
+            target="_blank"
+            href="https://refine.dev/docs/ui-integrations/mantine/introduction"
+          >
+            only supports Mantine v5
+          </Anchor>
+          .{' '}
+        </Text>
+        <Text fw={700}>
+          This template is a starter for{' '}
+          <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
+            Refine v4
+          </Text>{' '}
+          and{' '}
+          <Text inherit variant="gradient" component="span">
+            Mantine v7.
+          </Text>
         </Text>
       </Text>
 

@@ -1,0 +1,43 @@
+.normalizedForm {
+  border-radius: var(--mantine-radius-sm);
+
+  h1 {
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white))
+  }
+
+  form > * {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+
+  [name=email], [name=password] {
+    margin-top: var(--mantine-spacing-xs);
+    margin-bottom: var(--mantine-spacing-lg);
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+    font-size: var(--mantine-font-size-lg	);
+  }
+
+  [type=submit] {
+    margin-top: var(--mantine-spacing-xl);
+    margin-bottom: var(--mantine-spacing-xl);
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+    border: none;
+    border-radius: var(--mantine-radius-sm);
+    cursor: pointer;
+    background-color: var(--mantine-primary-color-8);
+
+    &:hover {
+      background-color: var(--mantine-primary-color-6);
+    }
+  }
+
+  a {
+    color: light-dark(var(--mantine-primary-color-6), var(--mantine-primary-color-4));
+    text-decoration: none;
+    display: inline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
