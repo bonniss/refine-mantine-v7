@@ -2,6 +2,7 @@ import { Button, NavLink, ScrollArea } from '@mantine/core';
 import { useLogout, useMenu } from '@refinedev/core';
 import { IconArticle, IconCategory2, IconHome2 } from '@tabler/icons-react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 import classes from './menu.module.css';
 
 const icons = [IconHome2, IconArticle, IconCategory2];
@@ -30,7 +31,10 @@ export const Menu = () => {
         </ul>
       </ScrollArea>
       <div className={classes.footer}>
-        <Button fullWidth onClick={() => logout()} radius={0} variant="gradient">Logout</Button>
+        <ColorSchemeToggle />
+        <Button fullWidth onClick={() => logout()} radius={0} variant="gradient">
+          Logout
+        </Button>
       </div>
     </nav>
   );
