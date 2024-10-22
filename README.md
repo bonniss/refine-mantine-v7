@@ -4,14 +4,14 @@ Refine's Mantine integration [only supports Mantine v5](https://refine.dev/docs/
 
 - Headless Refine v4 integration (based on [this tutorial](https://github.com/refinedev/refine/tree/master/examples/tutorial-headless)).
 - Sample resources of `blog-post` and `category`.
-- Mantine-ish login page.
+- Login page.
+- i18n.
+- Notification provider.
 - `Dockerfile` to deploy via Nginx.
-
-![](./public/screenshots/login.png)
 
 ![](./public/screenshots/home.png)
 
-![](./public/screenshots/resource.png)
+![](./public/screenshots/login.png)
 
 ## Features
 
