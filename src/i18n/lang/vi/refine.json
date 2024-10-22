@@ -1,0 +1,359 @@
+{
+  "locales": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "pages": {
+    "login": {
+      "title": "Refine + Mantine = ❤️‍🔥",
+      "signin": "Đăng nhập",
+      "signup": "Đăng ký",
+      "divider": "hoặc",
+      "fields": {
+        "email": "Email",
+        "password": "Mật khẩu"
+      },
+      "errors": {
+        "validEmail": "Địa chỉ email không hợp lệ"
+      },
+      "buttons": {
+        "submit": "Đăng nhập",
+        "forgotPassword": "Quên mật khẩu?",
+        "noAccount": "Chưa có tài khoản?",
+        "rememberMe": "Nhớ tôi"
+      }
+    },
+    "forgotPassword": {
+      "title": "Quên mật khẩu?",
+      "fields": {
+        "email": "Email"
+      },
+      "errors": {
+        "validEmail": "Địa chỉ email không hợp lệ"
+      },
+      "buttons": {
+        "submit": "Gửi hướng dẫn đặt lại mật khẩu"
+      }
+    },
+    "register": {
+      "title": "Đăng ký tài khoản",
+      "fields": {
+        "email": "Email",
+        "password": "Mật khẩu"
+      },
+      "errors": {
+        "validEmail": "Địa chỉ email không hợp lệ"
+      },
+      "buttons": {
+        "submit": "Đăng ký",
+        "haveAccount": "Đã có tài khoản?"
+      }
+    },
+    "updatePassword": {
+      "title": "Đổi mật khẩu",
+      "currentPassword": "Mật khẩu hiện tại",
+      "newPassword": "Mật khẩu mới",
+      "newRepassword": "Xác nhận mật khẩu mới",
+      "errors": {
+        "defaultPasswordDetected": "Bạn đang sử dụng mật khẩu mặc định, hãy đổi mật khẩu để tiếp tục.",
+        "confirmPasswordNotMatch": "Mật khẩu không khớp"
+      },
+      "buttons": {
+        "submit": "Cập nhật"
+      },
+      "validation": {
+        "newPasswordDifferent": "Mật khẩu mới phải khác mật khẩu mặc đinh hoặc mật khẩu cũ",
+        "mismatchRepassword": "Xác nhận mật khẩu không khớp"
+      }
+    },
+    "error": {
+      "info": "Có thể bạn đã quên thêm thành phần {{action}} vào tài nguyên {{resource}}.",
+      "404": "Xin lỗi, trang bạn yêu cầu không tồn tại.",
+      "500": "Rất tiếc, đã có lỗi xảy ra.",
+      "resource404": "Bạn có chắc đã tạo tài nguyên {{resource}}.",
+      "backHome": "Về trang chủ",
+      "goBack": "Về trang trước",
+      "invalidJSON": "Không phải giá trị JSON hợp lệ."
+    },
+    "admin": {
+      "admin": "Quản trị",
+      "metrics": "Số liệu",
+      "health": "Tình trạng",
+      "configuration": "Cấu hình",
+      "logs": "Ghi logs",
+      "systemHealth": "Tình trạng hệ thống",
+      "systemLogs": "Logs",
+      "serviceName": "Tên dịch vụ",
+      "serviceMetrics": "Các số liệu của chương trình",
+      "status": "Trạng thái",
+      "detail": "Chi tiết",
+      "close": "Đóng",
+      "name": "Tên",
+      "value": "Giá trị",
+      "level": "Mức độ",
+      "trace": "trace",
+      "debug": "debug",
+      "info": "info",
+      "warn": "warn",
+      "error": "error",
+      "off": "off",
+      "prefix": "Bắt đầu với",
+      "properties": "Các thuộc tính",
+      "property": "Thuộc tính",
+      "cacheStatistics": "Thống kê Cache",
+      "dataSourceStatistics": "Thống kê DataSource (tính bằng mili giây)",
+      "endpointsRequests": "Endpoints requests (tính bằng mili giây)",
+      "HTTPRequests": "HTTP requests (tính bằng mili giây)",
+      "garbageCollection": "Garbage Collection",
+      "expand": "Mở rộng",
+      "threadDump": "Thread dump",
+      "api": "Tài liệu API",
+      "lockNameFilter": "Filter by Lock Name",
+      "stackTrace": "StackTrace",
+      "show": "Mở",
+      "hidden": "Đóng",
+      "userManagement": "Quản lý tài khoản",
+      "users": "Tài khoản",
+      "login": "Tên đăng nhập",
+      "email": "Email",
+      "password": "Mật khẩu",
+      "language": "Ngôn ngữ",
+      "authorities": "Các quyền",
+      "createdDate": "Ngày tạo",
+      "lastModifiedBy": "Người sửa",
+      "modifiedDate": "Ngày sửa",
+      "activated": "Đang hoạt động",
+      "deactivated": "Khoá",
+      "activate": "Kích hoạt",
+      "deactivate": "Khoá",
+      "user": "Tài khoản",
+      "createUser": "Tạo mới tài khoản",
+      "editUser": "Cập nhật tài khoản",
+      "firstName": "Tên",
+      "lastName": "Họ",
+      "vietNamese": "Tiếng Việt",
+      "english": "English",
+      "createBy": "Người tạo",
+      "descUpdateUserSuccess": "Một tài khoản đã được cập nhật với định danh",
+      "descCreateUserSuccess": "Một tài khoản đã được tạo với định danh",
+      "descDeleteUserSuccess": "Một tài khoản đã được xoá với định danh",
+      "hints": {
+        "emailLogin": "Sử dụng email để đăng nhập hệ thống.",
+        "passwordDefault": "Mật khẩu mặc định là `m@tk6@u` nếu để trống.",
+        "defaultDeactivated": "Người dùng mới mặc định sẽ ở trạng thái khoá. Vui lòng kích hoạt sau."
+      }
+    }
+  },
+  "terms": {
+    "record": "Bản ghi",
+    "page": "trang",
+    "numberOfRows": "Số dòng"
+  },
+  "actions": {
+    "list": "Danh sách",
+    "createAdd": "Thêm",
+    "create": "Tạo mới",
+    "edit": "Chỉnh sửa",
+    "show": "Xem",
+    "approve": "Duyệt",
+    "reject": "Từ chối",
+    "delete": "Xoá"
+  },
+  "buttons": {
+    "add": "Thêm",
+    "create": "Tạo mới",
+    "saveAndClose": "Lưu và đóng",
+    "save": "Lưu",
+    "logout": "Đăng xuất",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "cancel": "Hủy",
+    "confirm": "Bạn có chắc chắn?",
+    "confirmDelete": "Bạn có chắc chắn muốn xoá `{{target}}`?",
+    "filter": "Lọc",
+    "clear": "Xóa bỏ",
+    "refresh": "Làm mới",
+    "show": "Hiển thị",
+    "undo": "Hoàn tác",
+    "import": "Nhập",
+    "clone": "Nhân bản",
+    "clipboard": {
+      "copy": "Sao chép",
+      "copied": "Đã sao chép"
+    },
+    "upload": {
+      "expand": "Tải file lên",
+      "start": "Bắt đầu tải lên {{count}} file",
+      "uploading": "Đang tải lên {{count}} file",
+      "success": "Tải lên thành công {{count}} file",
+      "failed": "Tải lên thất bại {{count}} file",
+      "processing": "Đang xử lý {{count}}/{{total}} file",
+      "hint": {
+        "dropzone": "Kéo file vào đây để tải lên",
+        "allowMultiple": "Cho phép tải nhiều file, mỗi file không quá {{maxSize}}Mb"
+      }
+    },
+    "download": {
+      "title": "Tải xuống"
+    },
+    "filters": {
+      "open": "Mở lọc",
+      "close": "Đóng lọc"
+    },
+    "notAccessTitle": "Bạn không có quyền truy cập",
+    "openModal": "Mở Modal"
+  },
+  "rte": {
+    "figureTitle": "Chèn hình ảnh",
+    "youtubeTitle": "Chèn video Youtube",
+    "insert": "Chèn {{count}} file"
+  },
+  "warnWhenUnsavedChanges": "Bạn có chắc chắn muốn rời đi? Bạn có thay đổi chưa được lưu.",
+  "notifications": {
+    "success": "Thành công",
+    "error": "Lỗi (mã trạng thái: {{statusCode}})",
+    "undoable": "Bạn có {{seconds}} giây để hoàn tác",
+    "changePasswordSuccess": "Mật khẩu đã được thay đổi.",
+    "createSuccess": "Tạo {{resource}} thành công",
+    "createError": "Có lỗi khi tạo {{resource}} (mã trạng thái: {{statusCode}})",
+    "deleteSuccess": "Xóa {{resource}} thành công",
+    "deleteError": "Có lỗi khi xóa {{resource}} (mã trạng thái: {{statusCode}})",
+    "editSuccess": "Chỉnh sửa {{resource}} thành công",
+    "editError": "Có lỗi khi chỉnh sửa {{resource}} (mã trạng thái: {{statusCode}})",
+    "importProgress": "Đang nhập: {{processed}}/{{total}}",
+    "empty": "Không tìm thấy {{resource}} nào",
+    "paginationProgress": "{{from}} - {{to}} trên tổng số {{total}} bản ghi"
+  },
+  "loading": "Đang tải",
+  "tags": {
+    "clone": "Nhân bản"
+  },
+  "dashboard": {
+    "title": "Bảng điều khiển",
+    "welcome": "👋 Xin chào `{{name}}`"
+  },
+  "posts": {
+    "posts": "Bài viết",
+    "fields": {
+      "id": "ID",
+      "title": "Tiêu đề",
+      "category": "Danh mục",
+      "status": {
+        "title": "Trạng thái",
+        "published": "Đã xuất bản",
+        "draft": "Bản nháp",
+        "rejected": "Bị từ chối"
+      },
+      "content": "Nội dung",
+      "createdAt": "Được tạo lúc"
+    },
+    "titles": {
+      "create": "Tạo bài viết",
+      "edit": "Chỉnh sửa bài viết",
+      "list": "Danh sách bài viết",
+      "show": "Xem bài viết"
+    }
+  },
+  "table": {
+    "actions": "Hành động"
+  },
+  "documentTitle": {
+    "default": "Omnibus",
+    "suffix": " | Omnibus",
+    "post": {
+      "list": "Bài viết | Omnibus",
+      "show": "Xem bài viết #{{id}} | Omnibus",
+      "edit": "Chỉnh sửa bài viết #{{id}} | Omnibus",
+      "create": "Tạo mới bài viết | Omnibus",
+      "clone": "Nhân bản bài viết #{{id}} | Omnibus"
+    }
+  },
+  "autoSave": {
+    "success": "đã lưu",
+    "error": "lỗi tự động lưu",
+    "loading": "đang lưu...",
+    "idle": "chờ thay đổi"
+  },
+  "filters": {
+    "buttons": {
+      "advancedSearch": "Tìm kiếm nâng cao",
+      "search": "Tìm kiếm",
+      "clear": "Xóa bộ lọc",
+      "addFilter": "Thêm tiêu chí lọc"
+    },
+    "titlePlaceholder": "Nhập giá trị `{{field}}`",
+    "searchByTitle": "Tìm theo `{{field}}`",
+    "searchHotKeyHint": "Nhấn `/` để truy cập nhanh.",
+    "operators": {
+      "equals": "bằng",
+      "notEquals": "không bằng",
+      "null": "rỗng",
+      "notNull": "khác rỗng",
+      "in": "thuộc",
+      "notIn": "không thuộc",
+      "contains": "chứa",
+      "notContains": "không chứa",
+      "greaterThan": "lớn hơn",
+      "greaterThanOrEqual": "lớn hơn/bằng",
+      "lessThan": "nhỏ hơn",
+      "lessThanOrEqual": "nhỏ hơn/bằng"
+    }
+  },
+  "settings": {
+    "showBlurOff": "Rõ",
+    "showBlurOn": "Mờ",
+    "list": {
+      "showAuditTime": "Hiện thời gian tạo sửa",
+      "showAuditors": "Hiện người tạo sửa",
+      "timeFormat": {
+        "label": "Định dạng thời gian",
+        "values": {
+          "local": "Giờ địa phương",
+          "relative": "Thời gian tương đối"
+        }
+      }
+    }
+  },
+  "validation": {
+    "required": "`{{field}}` không được để trống",
+    "minLength": "`{{field}}` không được ngắn hơn {{value}} ký tự",
+    "maxLength": "`{{field}}` không được dài hơn {{value}} ký tự",
+    "min": "`{{field}}` không được nhỏ hơn {{value}}",
+    "max": "`{{field}}` không được lớn hơn {{value}}"
+  },
+  "auditInfo": {
+    "by": "bởi",
+    "createdAt": "Tạo lúc",
+    "lastModifiedAt": "Chỉnh sửa gần nhất lúc"
+  },
+  "siderGroups": {},
+  "combobox": {
+    "hintSingleSelect": "Được chọn một {{field}}",
+    "hintMultiSelect": "Được chọn nhiều {{field}}"
+  },
+  "permission": {
+    "setFullPermission": "Đặt quyền đầy đủ",
+    "create": "Tạo mới",
+    "update": "Cập nhật",
+    "delete": "Xoá",
+    "read": "Xem",
+    "all": "Tất cả",
+    "authenticate": "Xác thực",
+    "zalo-authenticate": "Xác thực Zalo",
+    "register": "Đăng ký",
+    "activate": "Kích hoạt",
+    "account-reset-password-init": "Khởi tạo đặt lại mật khẩu tài khoản",
+    "account-reset-password-finish": "Hoàn thành đặt lại mật khẩu tài khoản",
+    "admin": "Quản trị viên",
+    "api-docs": "Tài liệu API",
+    "management-health": "Quản lý tình trạng hệ thống",
+    "management-info": "Thông tin quản lý",
+    "management-prometheus": "Quản lý Prometheus",
+    "management": "Quản lý",
+    "user": "Người dùng",
+    "account": "Tài khoản",
+    "change-password": "Đổi mật khẩu",
+    "authorities": "Chính quyền",
+    "audits": "Kiểm tra"
+  }
+}

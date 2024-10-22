@@ -1,0 +1,12 @@
+.root {
+  background-color: var(--mantine-color-yellow-1);
+}
+
+.title,
+.description {
+  color: var(--mantine-color-yellow-9);
+}
+
+.closeButton {
+  color: var(--mantine-color-yellow-6);
+}

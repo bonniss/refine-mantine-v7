@@ -1,4 +1,5 @@
-import { authProvider } from '@/authProvider';
+import { authProvider } from '@/providers/auth-provider';
+import { useI18nProvider, useLocaleResources } from '@/i18n';
 import { Refine } from '@refinedev/core';
 import routerBindings, {
   DocumentTitleHandler,
@@ -7,42 +8,25 @@ import routerBindings, {
 import dataProvider from '@refinedev/simple-rest';
 import { FunctionComponent } from 'react';
 import { Outlet } from 'react-router-dom';
+import notificationProvider from './notification-provider';
 
 interface RefineProvidersProps {}
 
 const RefineProviders: FunctionComponent<RefineProvidersProps> = () => {
+  const { i18nProvider } = useI18nProvider();
+  const resources = useLocaleResources(i18nProvider.translate);
   return (
     <Refine
       dataProvider={dataProvider('https://api.fake-rest.refine.dev')}
-      routerProvider={routerBindings}
+      resources={resources}
       authProvider={authProvider}
-      resources={[
-        {
-          name: 'blog_posts',
-          list: '/blog-posts',
-          create: '/blog-posts/create',
-          edit: '/blog-posts/edit/:id',
-          show: '/blog-posts/show/:id',
-          meta: {
-            canDelete: true,
-          },
-        },
-        {
-          name: 'categories',
-          list: '/categories',
-          create: '/categories/create',
-          edit: '/categories/edit/:id',
-          show: '/categories/show/:id',
-          meta: {
-            canDelete: true,
-          },
-        },
-      ]}
+      i18nProvider={i18nProvider}
+      routerProvider={routerBindings}
+      notificationProvider={notificationProvider}
       options={{
         syncWithLocation: true,
         warnWhenUnsavedChanges: true,
         useNewQueryKeys: true,
-        projectId: '8ucKx3-EUpElI-cKFUU6',
       }}
     >
       <Outlet />

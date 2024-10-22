@@ -2,9 +2,9 @@ import ColorSchemeToggle from '@/components/shared/ColorSchemeToggler';
 import { NavLink, ScrollArea, UnstyledButton } from '@mantine/core';
 import { useLogout, useMenu } from '@refinedev/core';
 import { IconArmchair, IconBlockquote, IconCategory2, IconLogout } from '@tabler/icons-react';
+import clsx from 'clsx';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import classes from './Sidebar.module.css';
-import clsx from 'clsx';
 
 const icons = [IconArmchair, IconBlockquote, IconCategory2];
 

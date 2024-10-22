@@ -1,0 +1,359 @@
+{
+  "locales": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "pages": {
+    "login": {
+      "title": "Refine + Mantine = ❤️‍🔥",
+      "signin": "Sign in",
+      "signup": "Sign up",
+      "divider": "or",
+      "fields": {
+        "email": "Email",
+        "password": "Password"
+      },
+      "errors": {
+        "validEmail": "Invalid email address"
+      },
+      "buttons": {
+        "submit": "Sign in",
+        "forgotPassword": "Forgot password?",
+        "noAccount": "Don't have an account?",
+        "rememberMe": "Remember me"
+      }
+    },
+    "forgotPassword": {
+      "title": "Forgot password?",
+      "fields": {
+        "email": "Email"
+      },
+      "errors": {
+        "validEmail": "Invalid email address"
+      },
+      "buttons": {
+        "submit": "Send password reset instructions"
+      }
+    },
+    "register": {
+      "title": "Create an account",
+      "fields": {
+        "email": "Email",
+        "password": "Password"
+      },
+      "errors": {
+        "validEmail": "Invalid email address"
+      },
+      "buttons": {
+        "submit": "Sign up",
+        "haveAccount": "Already have an account?"
+      }
+    },
+    "updatePassword": {
+      "title": "Change password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "newRepassword": "Confirm new password",
+      "errors": {
+        "defaultPasswordDetected": "You are using the default password, please change it to continue.",
+        "confirmPasswordNotMatch": "Passwords do not match"
+      },
+      "buttons": {
+        "submit": "Update"
+      },
+      "validation": {
+        "newPasswordDifferent": "The new password must be different from the default or old password",
+        "mismatchRepassword": "Password confirmation does not match"
+      }
+    },
+    "error": {
+      "info": "You might have forgotten to add the {{action}} component to the {{resource}} resource.",
+      "404": "Sorry, the page you requested does not exist.",
+      "500": "Sorry, something went wrong.",
+      "resource404": "Are you sure you have created the {{resource}} resource?",
+      "backHome": "Back to homepage",
+      "goBack": "Go back",
+      "invalidJSON": "Not a valid JSON value."
+    },
+    "admin": {
+      "admin": "Admin",
+      "metrics": "Metrics",
+      "health": "Health",
+      "configuration": "Configuration",
+      "logs": "Logs",
+      "systemHealth": "System Health",
+      "systemLogs": "System Logs",
+      "serviceName": "Service Name",
+      "serviceMetrics": "Program Metrics",
+      "status": "Status",
+      "detail": "Detail",
+      "close": "Close",
+      "name": "Name",
+      "value": "Value",
+      "level": "Level",
+      "trace": "trace",
+      "debug": "debug",
+      "info": "info",
+      "warn": "warn",
+      "error": "error",
+      "off": "off",
+      "prefix": "Starts with",
+      "properties": "Properties",
+      "property": "Property",
+      "cacheStatistics": "Cache Statistics",
+      "dataSourceStatistics": "DataSource Statistics (in milliseconds)",
+      "endpointsRequests": "Endpoints requests (in milliseconds)",
+      "HTTPRequests": "HTTP requests (in milliseconds)",
+      "garbageCollection": "Garbage Collection",
+      "expand": "Expand",
+      "threadDump": "Thread dump",
+      "api": "API Documentation",
+      "lockNameFilter": "Filter by Lock Name",
+      "stackTrace": "StackTrace",
+      "show": "Show",
+      "hidden": "Hide",
+      "userManagement": "User Management",
+      "users": "Users",
+      "login": "Username",
+      "email": "Email",
+      "password": "Password",
+      "language": "Language",
+      "authorities": "Authorities",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "modifiedDate": "Modified Date",
+      "activated": "Active",
+      "deactivated": "Deactivated",
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "user": "User",
+      "createUser": "Create New User",
+      "editUser": "Update User",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "vietNamese": "Vietnamese",
+      "english": "English",
+      "createBy": "Created By",
+      "descUpdateUserSuccess": "A user has been updated with ID",
+      "descCreateUserSuccess": "A user has been created with ID",
+      "descDeleteUserSuccess": "A user has been deleted with ID",
+      "hints": {
+        "emailLogin": "Use your email to log into the system.",
+        "passwordDefault": "Default password is `p@55%0rd` if left blank.",
+        "defaultDeactivated": "New users will be deactivated by default. Please activate them later."
+      }
+    }
+  },
+  "terms": {
+    "record": "Record",
+    "page": "page",
+    "numberOfRows": "Number of rows"
+  },
+  "actions": {
+    "list": "List",
+    "createAdd": "Add",
+    "create": "Create",
+    "edit": "Edit",
+    "show": "Show",
+    "approve": "Approve",
+    "reject": "Reject",
+    "delete": "Delete"
+  },
+  "buttons": {
+    "add": "Add",
+    "create": "Create",
+    "saveAndClose": "Save and close",
+    "save": "Save",
+    "logout": "Logout",
+    "delete": "Delete",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "confirm": "Are you sure?",
+    "confirmDelete": "Are you sure you want to delete `{{target}}`?",
+    "filter": "Filter",
+    "clear": "Clear",
+    "refresh": "Refresh",
+    "show": "Show",
+    "undo": "Undo",
+    "import": "Import",
+    "clone": "Clone",
+    "clipboard": {
+      "copy": "Copy",
+      "copied": "Copied"
+    },
+    "upload": {
+      "expand": "Upload file",
+      "start": "Start uploading {{count}} files",
+      "uploading": "Uploading {{count}} files",
+      "success": "Successfully uploaded {{count}} files",
+      "failed": "Failed to upload {{count}} files",
+      "processing": "Processing {{count}}/{{total}} files",
+      "hint": {
+        "dropzone": "Drop files here to upload",
+        "allowMultiple": "Allow multiple files, each no larger than {{maxSize}}MB"
+      }
+    },
+    "download": {
+      "title": "Download"
+    },
+    "filters": {
+      "open": "Open filter",
+      "close": "Close filter"
+    },
+    "notAccessTitle": "You don't have access",
+    "openModal": "Open Modal"
+  },
+  "rte": {
+    "figureTitle": "Insert image",
+    "youtubeTitle": "Insert Youtube video",
+    "insert": "Insert {{count}} files"
+  },
+  "warnWhenUnsavedChanges": "Are you sure you want to leave? You have unsaved changes.",
+  "notifications": {
+    "success": "Success",
+    "error": "Error (status code: {{statusCode}})",
+    "undoable": "You have {{seconds}} seconds to undo",
+    "changePasswordSuccess": "Password has been changed.",
+    "createSuccess": "Successfully created {{resource}}",
+    "createError": "Error creating {{resource}} (status code: {{statusCode}})",
+    "deleteSuccess": "Successfully deleted {{resource}}",
+    "deleteError": "Error deleting {{resource}} (status code: {{statusCode}})",
+    "editSuccess": "Successfully edited {{resource}}",
+    "editError": "Error editing {{resource}} (status code: {{statusCode}})",
+    "importProgress": "Importing: {{processed}}/{{total}}",
+    "empty": "No {{resource}} found",
+    "paginationProgress": "{{from}} - {{to}} of {{total}} records"
+  },
+  "loading": "Loading",
+  "tags": {
+    "clone": "Clone"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "👋 Welcome `{{name}}`"
+  },
+  "posts": {
+    "posts": "Posts",
+    "fields": {
+      "id": "ID",
+      "title": "Title",
+      "category": "Category",
+      "status": {
+        "title": "Status",
+        "published": "Published",
+        "draft": "Draft",
+        "rejected": "Rejected"
+      },
+      "content": "Content",
+      "createdAt": "Created At"
+    },
+    "titles": {
+      "create": "Create post",
+      "edit": "Edit post",
+      "list": "Post list",
+      "show": "Show post"
+    }
+  },
+  "table": {
+    "actions": "Actions"
+  },
+  "documentTitle": {
+    "default": "Omnibus",
+    "suffix": " | Omnibus",
+    "post": {
+      "list": "Posts | Omnibus",
+      "show": "View post #{{id}} | Omnibus",
+      "edit": "Edit post #{{id}} | Omnibus",
+      "create": "Create new post | Omnibus",
+      "clone": "Clone post #{{id}} | Omnibus"
+    }
+  },
+  "autoSave": {
+    "success": "saved",
+    "error": "auto-save error",
+    "loading": "saving...",
+    "idle": "waiting for changes"
+  },
+  "filters": {
+    "buttons": {
+      "advancedSearch": "Advanced search",
+      "search": "Search",
+      "clear": "Clear filters",
+      "addFilter": "Add filter criteria"
+    },
+    "titlePlaceholder": "Enter value for `{{field}}`",
+    "searchByTitle": "Search by `{{field}}`",
+    "searchHotKeyHint": "Press `/` for quick access.",
+    "operators": {
+      "equals": "equals",
+      "notEquals": "does not equal",
+      "null": "is empty",
+      "notNull": "is not empty",
+      "in": "in",
+      "notIn": "not in",
+      "contains": "contains",
+      "notContains": "does not contain",
+      "greaterThan": "greater than",
+      "greaterThanOrEqual": "greater than or equal",
+      "lessThan": "less than",
+      "lessThanOrEqual": "less than or equal"
+    }
+  },
+  "settings": {
+    "showBlurOff": "Clear",
+    "showBlurOn": "Blur",
+    "list": {
+      "showAuditTime": "Show creation and edit time",
+      "showAuditors": "Show creator and editor",
+      "timeFormat": {
+        "label": "Time format",
+        "values": {
+          "local": "Local time",
+          "relative": "Relative time"
+        }
+      }
+    }
+  },
+  "validation": {
+    "required": "`{{field}}` cannot be empty",
+    "minLength": "`{{field}}` must not be shorter than {{value}} characters",
+    "maxLength": "`{{field}}` must not be longer than {{value}} characters",
+    "min": "`{{field}}` must not be less than {{value}}",
+    "max": "`{{field}}` must not be greater than {{value}}"
+  },
+  "auditInfo": {
+    "by": "by",
+    "createdAt": "Created at",
+    "lastModifiedAt": "Last modified at"
+  },
+  "siderGroups": {},
+  "combobox": {
+    "hintSingleSelect": "Can select one {{field}}",
+    "hintMultiSelect": "Can select multiple {{field}}"
+  },
+  "permission": {
+    "setFullPermission": "Set full permission",
+    "create": "Create",
+    "update": "Update",
+    "delete": "Delete",
+    "read": "Read",
+    "all": "All",
+    "authenticate": "Authenticate",
+    "zalo-authenticate": "Zalo authenticate",
+    "register": "Register",
+    "activate": "Activate",
+    "account-reset-password-init": "Initiate account password reset",
+    "account-reset-password-finish": "Finish account password reset",
+    "admin": "Admin",
+    "api-docs": "API Documentation",
+    "management-health": "System Health Management",
+    "management-info": "Management Info",
+    "management-prometheus": "Prometheus Management",
+    "management": "Management",
+    "user": "User",
+    "account": "Account",
+    "change-password": "Change Password",
+    "authorities": "Authorities",
+    "audits": "Audits"
+  }
+}
