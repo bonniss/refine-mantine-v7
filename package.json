@@ -16,7 +16,10 @@
     "vitest:watch": "vitest",
     "test": "npm run typecheck && npm run prettier && npm run lint && npm run vitest && npm run build",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "up:mantine": "npm up @mantine/*",
+    "up:refine": "npm up @refinedev/*",
+    "release": "release-it --ci"
   },
   "dependencies": {
     "@mantine/core": "7.11.1",
@@ -65,6 +68,7 @@
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.3.2",
     "prop-types": "^15.8.1",
+    "release-it": "^17.10.0",
     "storybook": "^8.1.10",
     "storybook-dark-mode": "^4.0.2",
     "stylelint": "^16.6.1",
@@ -74,5 +78,19 @@
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
   },
-  "packageManager": "yarn@4.3.1"
+  "release-it": {
+    "npm": {
+      "publish": false
+    },
+    "git": {
+      "commit": true,
+      "tag": true,
+      "push": true,
+      "commitMessage": "🔖 [refine-mantine7] v${version}",
+      "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
+    },
+    "hooks": {
+      "after:bump": "npx auto-changelog -p"
+    }
+  }
 }
