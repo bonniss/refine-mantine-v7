@@ -1,10 +1,11 @@
-import { Anchor, Group, List, Text, ThemeIcon, Title, rem } from '@mantine/core';
-import classes from './Welcome.module.css';
+import { Anchor, List, Text, ThemeIcon, Title, rem } from '@mantine/core';
 import { IconCircleCheck } from '@tabler/icons-react';
+import WithTransition from '../shared/WithTransition';
+import classes from './Welcome.module.css';
 
 export function Welcome() {
   return (
-    <>
+    <WithTransition transition="fade-down">
       <Title className={classes.title} ta="center" mt={100}>
         <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
           Refine
@@ -30,7 +31,12 @@ export function Welcome() {
         </Text>
         <Text fw={700}>
           This template is a starter for{' '}
-          <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
+          <Text
+            inherit
+            variant="gradient"
+            component="span"
+            gradient={{ from: 'pink', to: 'yellow' }}
+          >
             Refine v4
           </Text>{' '}
           and{' '}
@@ -93,6 +99,6 @@ export function Welcome() {
         </Anchor>
         .
       </Text>
-    </>
+    </WithTransition>
   );
 }

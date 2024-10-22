@@ -1,0 +1,7 @@
+export const EMPTY_STRING = ''
+export const LONG_HYPHEN = '―'
+export const SLASH = '/'
+export const ELLIPSIS = '…'
+export const COMMA = ','
+export const COMMA_SPACE = ', '
+export const BOLD_RIGHT_ARROW = '➔'
