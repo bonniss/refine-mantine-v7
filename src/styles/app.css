@@ -1,0 +1,15 @@
+/**
+TailwindCSS@4 preflight can be conflict with Mantine@7.
+See more:
+- https://github.com/orgs/mantinedev/discussions/1672
+- https://tailwindcss.com/docs/preflight#disabling-preflight
+
+There's a package `tailwind-preset-mantine` which facilitate the combination.
+Check it out at: https://github.com/Songkeys/tailwind-preset-mantine
+*/
+@import "tailwind-preset-mantine";
+
+/**
+Just a note on how to manually customize dark mode with Mantine and Tailwind, already cared by the plugin.
+*/
+/* @custom-variant dark (&:where([data-mantine-color-scheme=dark], [data-mantine-color-scheme=dark] *)); */

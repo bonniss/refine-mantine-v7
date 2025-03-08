@@ -7,8 +7,8 @@
 Refine's Mantine integration [only supports Mantine v5](https://refine.dev/docs/ui-integrations/mantine/introduction). This template build on top of [Mantine v7 + Vite template](https://github.com/mantinedev/vite-template), adding:
 
 - Headless Refine v4 integration (based on [this tutorial](https://github.com/refinedev/refine/tree/master/examples/tutorial-headless)).
+- TailwindCSS v4.
 - Sample resources of `blog-post` and `category`.
-- Login page.
 - i18n.
 - Notification provider.
 - `Dockerfile` to deploy via Nginx.
@@ -59,6 +59,8 @@ This template comes with the following features:
 Mantine@7 offers several approaches of theming and styling. [Learn here](https://mantine.dev/getting-started/#learn).
 
 Mantine@7 also offers a system of CSS variables that you can use them in your stylesheets. To get CSS variables autocomplete and PostCSS support, [follow here to set up your VS Code](https://mantine.dev/getting-started/#set-up-vs-code).
+
+Last but not least, you have full power of TailwindCSS v4 with dark mode support out of the box.
 
 ### Change favicon
 

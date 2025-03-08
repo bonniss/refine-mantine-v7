@@ -28,7 +28,7 @@ export const Sidebar = () => {
                     clsx(classes.routerNavLink, isActive && classes.routerNavLinkActive)
                   }
                 >
-                  <NavLink className={classes.link} label={item.label} leftSection={<Icon />} />
+                  <NavLink className={classes.link} label={item.label} leftSection={<Icon size={20} />} />
                 </RouterNavLink>
               </li>
             );

@@ -7,7 +7,12 @@ export function Welcome() {
   return (
     <WithTransition transition="fade-down">
       <Title className={classes.title} ta="center" mt={100}>
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
+        <Text
+          inherit
+          variant="gradient"
+          component="span"
+          gradient={{ from: 'pink', to: 'yellow' }}
+        >
           Refine
         </Text>{' '}
         <Text inherit variant="text" component="span">
@@ -17,88 +22,101 @@ export function Welcome() {
           Mantine
         </Text>
       </Title>
+      <div className="space-y-2 py-2">
+        <section>
 
-      <Text ta="center" size="lg" maw={580} mx="auto" my="lg">
-        <Text c="dimmed" component="span">
-          Refine's Mantine integration{' '}
-          <Anchor
-            target="_blank"
-            href="https://refine.dev/docs/ui-integrations/mantine/introduction"
-          >
-            only supports Mantine v5
-          </Anchor>
-          .{' '}
-        </Text>
-        <Text fw={700}>
-          This template is a starter for{' '}
-          <Text
-            inherit
-            variant="gradient"
-            component="span"
-            gradient={{ from: 'pink', to: 'yellow' }}
-          >
-            Refine v4
-          </Text>{' '}
-          and{' '}
-          <Text inherit variant="gradient" component="span">
-            Mantine v7.
+          <Text ta="center" size="lg" maw={580} mx="auto">
+            <Text c="dimmed" component="span">
+              Refine's Mantine integration{' '}
+              <Anchor
+                target="_blank"
+                href="https://refine.dev/docs/ui-integrations/mantine/introduction"
+              >
+                only supports Mantine v5
+              </Anchor>
+              .{' '}
+            </Text>
+            <p className="text-3xl">
+              This template is a combination of
+              <br />
+              <Text
+                inherit
+                variant="gradient"
+                component="span"
+                gradient={{ from: 'pink', to: 'yellow' }}
+              >
+                Refine v4
+              </Text>{' '}
+              <br />
+              <Text inherit variant="gradient" component="span">
+                Mantine v7
+              </Text>
+              <br />
+              <span className="bg-gradient-to-tr from-10% from-grape-500 via-50% via-purple-600 to-70% to-grape-300 bg-clip-text text-transparent">
+                Tailwind v4
+              </span>
+            </p>
           </Text>
-        </Text>
-      </Text>
+        </section>
 
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" my="lg">
-        This template is created with the help of the following resources:
-      </Text>
-
-      <List ta="center">
-        <List.Item
-          icon={
-            <ThemeIcon color="teal" size={24} radius="xl">
-              <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
-            </ThemeIcon>
-          }
-        >
-          <Anchor target="_blank" href="https://github.com/mantinedev/vite-template">
-            Mantine + Vite template
-          </Anchor>{' '}
-        </List.Item>
-        <List.Item
-          icon={
-            <ThemeIcon color="teal" size={24} radius="xl">
-              <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
-            </ThemeIcon>
-          }
-        >
-          <Anchor
-            target="_blank"
-            href="https://refine.dev/docs/guides-concepts/usage-with-existing-projects/#router-examples"
-          >
-            Refine Docs - Usage with Existing Projects
-          </Anchor>
-        </List.Item>
-        <List.Item
-          icon={
-            <ThemeIcon color="teal" size={24} radius="xl">
-              <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
-            </ThemeIcon>
-          }
-        >
-          <Anchor
-            target="_blank"
-            href="https://github.com/refinedev/refine/tree/master/examples/tutorial-headless"
-          >
-            Refine - Headless tutorial
-          </Anchor>
-        </List.Item>
-      </List>
-
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        Learn more on Mantine + Vite integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/vite/" size="lg">
-          this guide
-        </Anchor>
-        .
-      </Text>
+        <section>
+          <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" my="xs">
+            This template can be created with the help to the following resources:
+          </Text>
+          <List ta="center">
+            <List.Item
+              icon={
+                <ThemeIcon color="teal" size={24} radius="xl">
+                  <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
+                </ThemeIcon>
+              }
+            >
+              <Anchor target="_blank" href="https://github.com/mantinedev/vite-template">
+                Mantine + Vite template
+              </Anchor>{' '}
+            </List.Item>
+            <List.Item
+              icon={
+                <ThemeIcon color="teal" size={24} radius="xl">
+                  <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
+                </ThemeIcon>
+              }
+            >
+              <Anchor
+                target="_blank"
+                href="https://refine.dev/docs/guides-concepts/usage-with-existing-projects/#router-examples"
+              >
+                Refine Docs - Usage with Existing Projects
+              </Anchor>
+            </List.Item>
+            <List.Item
+              icon={
+                <ThemeIcon color="teal" size={24} radius="xl">
+                  <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
+                </ThemeIcon>
+              }
+            >
+              <Anchor
+                target="_blank"
+                href="https://github.com/refinedev/refine/tree/master/examples/tutorial-headless"
+              >
+                Refine - Headless tutorial
+              </Anchor>
+            </List.Item>
+            <List.Item
+              icon={
+                <ThemeIcon color="teal" size={24} radius="xl">
+                  <IconCircleCheck style={{ width: rem(16), height: rem(16) }} />
+                </ThemeIcon>
+              }
+            >
+              <Anchor target="_blank" href="https://tailwindcss.com/docs/installation/using-vite">
+                Tailwind v4 docs
+              </Anchor>
+            </List.Item>
+          </List>
+        </section>
+      </div>
     </WithTransition>
   );
 }
