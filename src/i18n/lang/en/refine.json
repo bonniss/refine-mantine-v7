@@ -5,6 +5,7 @@
   },
   "pages": {
     "login": {
+      "demohint": "Anything works, just don’t leave it blank.",
       "title": "Refine + Mantine = ❤️‍🔥",
       "signin": "Sign in",
       "signup": "Sign up",

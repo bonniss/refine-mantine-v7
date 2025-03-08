@@ -4,9 +4,7 @@ import {
   Box,
   Button,
   Checkbox,
-  Code,
   Container,
-  CopyButton,
   Paper,
   PasswordInput,
   Stack,
@@ -15,7 +13,7 @@ import {
 } from '@mantine/core';
 import { useLogin, useNotification, useTranslate } from '@refinedev/core';
 import { useForm } from '@refinedev/react-hook-form';
-import { IconCheck, IconInfoCircle } from '@tabler/icons-react';
+import { IconInfoCircle } from '@tabler/icons-react';
 
 const defaultUser = {
   email: 'demo@refine.dev',
@@ -65,35 +63,14 @@ export const Login = () => {
           <Title order={2} ta="center">
             {t('pages.login.title')}
           </Title>
-          <Alert variant="light" color="blue" title="Default user" icon={<IconInfoCircle />}>
-            Email:
-            <CopyButton value={defaultUser.email}>
-              {({ copied, copy }) => (
-                <Button
-                  variant="transparent"
-                  size="compact-xs"
-                  color={copied ? 'teal' : 'blue'}
-                  onClick={copy}
-                >
-                  <Code>{defaultUser.email}</Code> {copied && <IconCheck size={20} />}
-                </Button>
-              )}
-            </CopyButton>
-            <br /> Password:{' '}
-            <CopyButton value={defaultUser.email}>
-              {({ copied, copy }) => (
-                <Button
-                  variant="transparent"
-                  size="compact-xs"
-                  color={copied ? 'teal' : 'blue'}
-                  onClick={copy}
-                >
-                  <Code>{defaultUser.password}</Code> {copied && <IconCheck size={20} />}
-                </Button>
-              )}
-            </CopyButton>
-          </Alert>
           <Paper withBorder shadow="md" p="lg" radius="md">
+            <Alert
+              mb="lg"
+              variant="transparent"
+              color="blue"
+              title={t('pages.login.demohint')}
+              icon={<IconInfoCircle />}
+            />
             <Box component="form" mb="lg" onSubmit={handleSubmit(doSubmit)}>
               <Stack gap="md">
                 <TextInput

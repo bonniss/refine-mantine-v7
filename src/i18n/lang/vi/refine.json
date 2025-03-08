@@ -5,6 +5,7 @@
   },
   "pages": {
     "login": {
+      "demohint": "Any input is fine, just don’t leave it blank.",
       "title": "Refine + Mantine = ❤️‍🔥",
       "signin": "Đăng nhập",
       "signup": "Đăng ký",
