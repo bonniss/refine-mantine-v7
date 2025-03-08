@@ -42,6 +42,16 @@ This template comes with the following features:
 
 ### Other scripts
 
+- `up:mantine` – upgrade Mantine's packages
+- `up:refine` – upgrade Refine's packages
 - `storybook` – starts storybook dev server
 - `storybook:build` – build production storybook bundle to `storybook-static`
 - `prettier:write` – formats all files with Prettier
+
+## Development
+
+### Theming and styling
+
+Mantine@7 offers several approaches of theming and styling. [Learn here](https://mantine.dev/getting-started/#learn).
+
+Mantine@7 also offers a system of CSS variables that you can use them in your stylesheets. To get CSS variables autocomplete and PostCSS support, [follow here to set up your VS Code](https://mantine.dev/getting-started/#set-up-vs-code).
