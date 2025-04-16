@@ -1,24 +1,7 @@
-import WithTransition from '@/components/shared/WithTransition';
-import {
-  Alert,
-  Box,
-  Button,
-  Checkbox,
-  Container,
-  Paper,
-  PasswordInput,
-  Stack,
-  TextInput,
-  Title,
-} from '@mantine/core';
+import { Button, Checkbox, Paper, PasswordInput, TextInput } from '@mantine/core';
 import { useLogin, useNotification, useTranslate } from '@refinedev/core';
 import { useForm } from '@refinedev/react-hook-form';
-import { IconInfoCircle } from '@tabler/icons-react';
-
-const defaultUser = {
-  email: 'demo@refine.dev',
-  password: 'demodemo',
-};
+import clsx from 'clsx';
 
 interface LoginVM {
   email: string;
@@ -57,60 +40,55 @@ export const Login = () => {
   };
 
   return (
-    <Container size={500} h="100vh">
-      <WithTransition transition="pop">
-        <Stack py="20%">
-          <Title order={2} ta="center">
-            {t('pages.login.title')}
-          </Title>
-          <Paper withBorder shadow="md" p="lg" radius="md">
-            <Alert
-              mb="lg"
-              variant="transparent"
-              color="blue"
-              title={t('pages.login.demohint')}
-              icon={<IconInfoCircle />}
-            />
-            <Box component="form" mb="lg" onSubmit={handleSubmit(doSubmit)}>
-              <Stack gap="md">
-                <TextInput
-                  {...register('username', { required: true })}
-                  label={t('pages.admin.login')}
-                  placeholder={t('pages.admin.login')}
-                  withAsterisk
-                  autoFocus
-                  disabled={formLoading}
-                  error={
-                    errors?.username &&
-                    t('validation.required', {
-                      field: t('pages.admin.login'),
-                    })
-                  }
-                />
-                <PasswordInput
-                  {...register('password', { required: true })}
-                  label={t('pages.login.fields.password')}
-                  placeholder={t('pages.login.fields.password')}
-                  withAsterisk
-                  disabled={formLoading}
-                  error={
-                    errors?.password &&
-                    t('validation.required', {
-                      field: t('pages.login.fields.password'),
-                    })
-                  }
-                />
-                <Checkbox
-                  {...register('rememberMe')}
-                  label={t('pages.login.buttons.rememberMe')}
-                  disabled={formLoading}
-                />
-                <Button type="submit">{t('pages.login.buttons.submit')}</Button>
-              </Stack>
-            </Box>
-          </Paper>
-        </Stack>
-      </WithTransition>
-    </Container>
+    <div
+      className={clsx(
+        'animate-fade-up',
+        'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-sm space-y-4'
+      )}
+    >
+      <h2 className="text-3xl font-bold text-center">{t('pages.login.title')}</h2>
+      <Paper withBorder shadow="md" p="lg" radius="md">
+        <p className="p-4 text-sky-700 dark:text-sky-400 italic font-semibold">
+          {t('pages.login.demohint')}
+        </p>
+        <form className="space-y-6" onSubmit={handleSubmit(doSubmit)}>
+          <TextInput
+            {...register('username', { required: true })}
+            label={t('pages.admin.login')}
+            placeholder={t('pages.admin.login')}
+            withAsterisk
+            autoFocus
+            disabled={formLoading}
+            error={
+              errors?.username &&
+              t('validation.required', {
+                field: t('pages.admin.login'),
+              })
+            }
+          />
+          <PasswordInput
+            {...register('password', { required: true })}
+            label={t('pages.login.fields.password')}
+            placeholder={t('pages.login.fields.password')}
+            withAsterisk
+            disabled={formLoading}
+            error={
+              errors?.password &&
+              t('validation.required', {
+                field: t('pages.login.fields.password'),
+              })
+            }
+          />
+          <Checkbox
+            {...register('rememberMe')}
+            label={t('pages.login.buttons.rememberMe')}
+            disabled={formLoading}
+          />
+          <Button fullWidth type="submit">
+            {t('pages.login.buttons.submit')}
+          </Button>
+        </form>
+      </Paper>
+    </div>
   );
 };

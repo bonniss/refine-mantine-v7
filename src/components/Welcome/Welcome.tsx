@@ -7,12 +7,7 @@ export function Welcome() {
   return (
     <WithTransition transition="fade-down">
       <Title className={classes.title} ta="center" mt={100}>
-        <Text
-          inherit
-          variant="gradient"
-          component="span"
-          gradient={{ from: 'pink', to: 'yellow' }}
-        >
+        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
           Refine
         </Text>{' '}
         <Text inherit variant="text" component="span">
@@ -22,44 +17,41 @@ export function Welcome() {
           Mantine
         </Text>
       </Title>
-      <div className="space-y-2 py-2">
-        <section>
-
-          <Text ta="center" size="lg" maw={580} mx="auto">
-            <Text c="dimmed" component="span">
-              Refine's Mantine integration{' '}
-              <Anchor
-                target="_blank"
-                href="https://refine.dev/docs/ui-integrations/mantine/introduction"
-              >
-                only supports Mantine v5
-              </Anchor>
-              .{' '}
-            </Text>
-            <p className="text-3xl">
-              This template is a combination of
-              <br />
-              <Text
-                inherit
-                variant="gradient"
-                component="span"
-                gradient={{ from: 'pink', to: 'yellow' }}
-              >
-                Refine v4
-              </Text>{' '}
-              <br />
-              <Text inherit variant="gradient" component="span">
-                Mantine v7
-              </Text>
-              <br />
-              <span className="bg-gradient-to-tr from-10% from-grape-500 via-50% via-purple-600 to-70% to-grape-300 bg-clip-text text-transparent">
-                Tailwind v4
-              </span>
-            </p>
+      <div className="space-y-8 py-6">
+        <section className="text-center flex flex-col gap-4">
+          <Text c="dimmed" component="span">
+            Refine&apos;s Mantine integration{' '}
+            <Anchor
+              target="_blank"
+              href="https://refine.dev/docs/ui-integrations/mantine/introduction"
+            >
+              only supports Mantine v5
+            </Anchor>
+            .{' '}
           </Text>
+          <p className="text-3xl">
+            This template is a combination of
+            <br />
+            <Text
+              inherit
+              variant="gradient"
+              component="span"
+              gradient={{ from: 'pink', to: 'yellow' }}
+            >
+              Refine v4
+            </Text>{' '}
+            <br />
+            <Text inherit variant="gradient" component="span">
+              Mantine v7
+            </Text>
+            <br />
+            <span className="bg-gradient-to-tr from-10% from-fuchsia-200 via-50% via-purple-600 to-70% to-fuchsia-400 bg-clip-text text-transparent">
+              Tailwind v4
+            </span>
+          </p>
         </section>
 
-        <section>
+        <section className="space-y-4">
           <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" my="xs">
             This template can be created with the help to the following resources:
           </Text>
