@@ -95,3 +95,87 @@ public/ms-icon-144x144.png
 public/ms-icon-150x150.png
 public/ms-icon-310x310.png
 ```
+
+## TL;DR: Why use TailwindCSS alongside Mantine?
+
+**Mantine v7 is leaner, faster, and more focused than ever** — dropping CSS-in-JS and encouraging a simpler styling approach. It gives you logic-rich, accessible components out of the box, and a solid theme system to build on.
+
+But for many developers, that’s only half the picture.
+
+> TailwindCSS fills the gap with lightning-fast layout, responsive utilities, gradients, motion, and fine-grained visual control — all without leaving your markup.
+
+Instead of competing, **Mantine and Tailwind complement each other beautifully**:
+
+- Use **Mantine** for structure, accessibility, and interactive components.
+- Use **TailwindCSS** for layout, styling, and animation.
+- And optionally, reach for motion plugins like `tailwindcss-motion` to enhance UI transitions — no `Transition` components or CSS keyframes required.
+
+The result?
+A frontend stack that feels **composable, expressive, and fast to work with**.
+
+### 🧱 Layout & Spacing
+
+| Feature                    | Mantine v7                          | TailwindCSS                             |
+|----------------------------|--------------------------------------|------------------------------------------|
+| Horizontal layout          | `<Group />`                         | `flex items-center space-x-2`            |
+| Vertical stack             | `<Stack />`                         | `flex flex-col space-y-4`                |
+| Responsive layout          | Manual media queries in CSS         | `sm:`, `md:`, `lg:` responsive prefixes  |
+| Custom spacing             | Theme-based spacing tokens          | `p-4`, `gap-6`, `m-2` directly in JSX    |
+| Grid system                | `<Grid />`, `<Col />`               | `grid grid-cols-3 gap-4`                 |
+
+> 💡 For layout + spacing, Tailwind is faster and more expressive — especially for prototyping.
+
+## 🧾 Typography & Text
+
+| Feature                       | Mantine v7                      | TailwindCSS                                |
+|-------------------------------|----------------------------------|---------------------------------------------|
+| Headings (`<Title />`)        | Props like `order={2}`           | `text-2xl font-bold`                        |
+| Body text (`<Text />`)        | Theme-based tokens               | `text-base text-gray-700`                  |
+| Longform / markdown content   | `TypographyStylesProvider`       | `@tailwind/typography` → `prose` classes   |
+
+> 🧠 Tailwind gives you **atomic control**, Mantine gives you **semantic abstraction** — mix as needed.
+
+## 🎨 Styling & Gradients
+
+| Feature                     | Mantine v7                                | TailwindCSS                                   |
+|-----------------------------|--------------------------------------------|------------------------------------------------|
+| Gradient backgrounds        | `style={{ backgroundImage: ... }}`         | `bg-gradient-to-r from-pink-500 to-purple-500` |
+| Gradient text               | `<Text variant="gradient" />`              | `bg-clip-text text-transparent`               |
+| Hover/focus states          | Use `classNames` + custom CSS              | `hover:bg-blue-600 focus:ring`                |
+| Rounded corners             | `radius="md"` or CSS Modules               | `rounded-md`, `rounded-full`                  |
+| Shadow/elevation            | Props or CSS Modules                       | `shadow`, `shadow-lg`, `drop-shadow-sm`       |
+
+> 🎯 Tailwind gives you **instant visual feedback**, Mantine gives you **theme safety**.
+
+### 📱 Responsive Design
+
+| Feature                     | Mantine v7                              | TailwindCSS                          |
+|-----------------------------|------------------------------------------|--------------------------------------|
+| Breakpoints                 | `theme.breakpoints.md`, etc.             | `sm:`, `md:`, `lg:` utilities        |
+| Responsive spacing          | Requires manual CSS                     | `p-4 md:p-8 lg:p-12`                 |
+| Show/hide on screen sizes   | Requires logic or `MediaQuery`          | `hidden md:block`, `lg:flex`         |
+| Adaptive typography         | Manual overrides                        | `text-sm md:text-base lg:text-lg`    |
+
+> ⚡ Tailwind makes responsiveness a breeze — especially when you don’t want to open a CSS file.
+
+### 🌀 Animation & Motion
+
+| Feature                        | Mantine v7                            | Tailwind + Plugins                          |
+|--------------------------------|----------------------------------------|---------------------------------------------|
+| Basic transitions              | `<Transition />`, `<Collapse />`      | `transition`, `duration-300`, `ease-in-out` |
+| Preset animations              | N/A (manual setup)                    | `tailwindcss-animate`, `tailwindcss-motion` |
+| Declarative motion             | JSX-wrapped components                | Utility classes + data attributes           |
+| Auto list transitions          | N/A                                    | `auto-animate` plugin                        |
+
+> 🌀 With motion plugins, Tailwind gives you **drop-in animation** — no JS required.
+
+### ✅ When to Use What
+
+| Use Case                     | Best Tool       |
+|------------------------------|------------------|
+| Complex components (modal, popover, drawer) | **Mantine**  |
+| Layout, grid, spacing, flex                | **Tailwind** |
+| Fast prototyping or tweaking spacing       | **Tailwind** |
+| Form handling & validation                 | **Mantine**  |
+| Typography, hover states, gradients        | **Tailwind** |
+| Transitions and motion                     | **Tailwind** (with plugins) |
