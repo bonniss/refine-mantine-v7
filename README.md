@@ -164,10 +164,29 @@ A frontend stack that feels **composable, expressive, and fast to work with**.
 |--------------------------------|----------------------------------------|---------------------------------------------|
 | Basic transitions              | `<Transition />`, `<Collapse />`      | `transition`, `duration-300`, `ease-in-out` |
 | Preset animations              | N/A (manual setup)                    | `tailwindcss-animate`, `tailwindcss-motion` |
-| Declarative motion             | JSX-wrapped components                | Utility classes + data attributes           |
-| Auto list transitions          | N/A                                    | `auto-animate` plugin                        |
 
 > 🌀 With motion plugins, Tailwind gives you **drop-in animation** — no JS required.
+
+Nice! Those are also solid Tailwind-based UI libraries — here’s an **updated version** of the ecosystem section with **those new libraries included**, keeping it concise and clear:
+
+---
+
+### 🌐 The Tailwind Ecosystem: Copy-Paste UI That Complements Mantine
+
+When it comes to layout, dashboards, and presentational UI, **Tailwind’s ecosystem delivers fast, composable building blocks**. Here are some **free or freemium** Tailwind UI libraries offering ready-to-use components:
+
+| Library                        | What You Get                                     |
+|-------------------------------|--------------------------------------------------|
+| [**Preline UI**](https://preline.co)     | Layouts, navbars, modals, responsive grids      |
+| [**HyperUI**](https://www.hyperui.dev)   | E-commerce, auth pages, clean sections          |
+| [**Meraki UI**](https://merakiui.com)    | Dashboards, cards, headers, dark mode support   |
+| [**Flowbite**](https://flowbite.com)     | Rich component set with optional JS (e.g. tabs) |
+| [**Flyon UI**](http://flyonui.com)       | Clean components with minimalist design         |
+| [**Sailboat UI**](https://sailboatui.com)| Buttons, forms, cards, alerts — copy and paste  |
+
+> 🧠 Use these libraries to scaffold pages fast, and plug in **Mantine components** where logic or interactivity is needed.
+
+No JS lock-in. No setup friction. Just **drop in the HTML** and you’re off.
 
 ### ✅ When to Use What
 
@@ -179,3 +198,5 @@ A frontend stack that feels **composable, expressive, and fast to work with**.
 | Form handling & validation                 | **Mantine**  |
 | Typography, hover states, gradients        | **Tailwind** |
 | Transitions and motion                     | **Tailwind** (with plugins) |
+| Marketing pages, hero sections, UI blocks | **Tailwind UI Libraries** (e.g. Preline, HyperUI, Sailboat), [ui.mantine.dev](https://ui.mantine.dev/) |
+| Dashboards & scaffolding layouts    | **Tailwind UI Libraries** (e.g. Meraki, Flowbite, Flyon) |
