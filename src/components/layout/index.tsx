@@ -3,7 +3,7 @@ import { Sidebar } from '@/components/layout/Sidebar';
 import { IconMenu2 } from '@tabler/icons-react';
 
 export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -20,15 +20,27 @@ export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
         </div>
       </header>
 
-      {/* Sidebar */}
-      <aside className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 transform transition-transform duration-200 ease-in-out border-r border-gray-200/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-20
-        ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+      {/* Desktop Sidebar */}
+      <aside className="hidden lg:block fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 border-r border-gray-200/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-20">
+        <Sidebar />
+      </aside>
+
+      {/* Mobile Backdrop */}
+      <div 
+        className={`fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity duration-200 lg:hidden ${
+          sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setSidebarOpen(false)}
+      />
+
+      {/* Mobile Sidebar */}
+      <aside className={`lg:hidden fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 transform transition-transform duration-200 ease-in-out border-r border-gray-200/50 dark:border-gray-800/50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-20
+        ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <Sidebar />
       </aside>
 
       {/* Main Content */}
-      <main className={`pt-16 min-h-screen transition-all duration-200 ease-in-out
-        ${sidebarOpen ? 'lg:pl-64' : 'lg:pl-0'}`}>
+      <main className="lg:pl-64 pt-16 min-h-screen transition-all duration-200 ease-in-out">
         <div className="p-4 h-[calc(100vh-4rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 scrollbar-track-transparent">
           {children}
         </div>
