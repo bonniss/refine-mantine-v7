@@ -11,10 +11,6 @@ export const Sidebar = () => {
 
   return (
     <nav className="h-full flex flex-col bg-transparent">
-      <header className="p-4">
-        <ColorSchemeToggle />
-      </header>
-
       <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 scrollbar-track-transparent">
         <ul className="py-4 space-y-1">
           {[{ key: 'home', route: '/', label: 'Home' }, ...menuItems].map((item, idx) => {

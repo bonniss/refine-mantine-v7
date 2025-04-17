@@ -1,6 +1,8 @@
-import { PropsWithChildren, useState } from 'react';
 import { Sidebar } from '@/components/layout/Sidebar';
-import { IconMenu2 } from '@tabler/icons-react';
+import { IconMenu3 } from '@tabler/icons-react';
+import clsx from 'clsx';
+import { PropsWithChildren, useState } from 'react';
+import ColorSchemeToggle from '../shared/ColorSchemeToggler';
 
 export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -8,15 +10,22 @@ export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 h-16 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-700/50 z-30">
-        <div className="flex items-center justify-between h-full px-4">
+      <header className={clsx("fixed top-0 left-0 right-0 h-16 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-700/50 z-30",
+        'flex flex-row justify-between items-center px-6'
+      )}>
+        <div className="group-left flex items-center gap-2 h-full">
+          <img className={clsx(
+            "h-20",
+            "animate-wiggle animate-infinite animate-duration-[4000ms] animate-ease-linear")} src="/android-icon-96x96.png" alt="" />
+        </div>
+        <div className="group-right flex items-center gap-2 h-full">
+          <ColorSchemeToggle />
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100/50 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800/50 lg:hidden"
           >
-            <IconMenu2 className="w-6 h-6" />
+            <IconMenu3 className="w-6 h-6" />
           </button>
-          <div className="flex-1" />
         </div>
       </header>
 
@@ -26,10 +35,9 @@ export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
       </aside>
 
       {/* Mobile Backdrop */}
-      <div 
-        className={`fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity duration-200 lg:hidden ${
-          sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+      <div
+        className={`fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity duration-200 lg:hidden ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
         onClick={() => setSidebarOpen(false)}
       />
 

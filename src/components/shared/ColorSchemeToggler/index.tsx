@@ -1,45 +1,56 @@
-import {
-  ActionIcon,
-  ActionIconProps,
-  Group,
-  ThemeIcon,
-  useComputedColorScheme,
-  useMantineColorScheme,
-} from '@mantine/core';
-import { IconMoon, IconSun } from '@tabler/icons-react';
-import cx from 'clsx';
 import { FunctionComponent } from 'react';
-import classes from './ColorSchemeToggler.module.css';
+import { useMantineColorScheme, useComputedColorScheme } from '@mantine/core';
+import { IconSun, IconMoon } from '@tabler/icons-react';
 
-interface ColorSchemeToggleProps extends ActionIconProps {}
+type ColorSchemeToggleProps = {};
 
-const ColorSchemeToggle: FunctionComponent<ColorSchemeToggleProps> = ({ ...props }) => {
+const ColorSchemeToggle: FunctionComponent<ColorSchemeToggleProps> = () => {
   const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+  const colorScheme = useComputedColorScheme('light', {
+    getInitialValueInEffect: true,
+  });
+
+  const toggle = () =>
+    setColorScheme(colorScheme === 'light' ? 'dark' : 'light');
+
+  const renderIcon = (
+    Icon: typeof IconSun,
+    isVisible: boolean,
+    color: string
+  ) => (
+    <Icon
+      className={`
+        absolute inset-0 m-auto transition-all duration-300 transform
+        ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}
+        ${color}
+      `}
+      stroke={2}
+      size={20} // ensures a consistent size
+    />
+  );
 
   return (
-    <Group justify="center">
-      <ActionIcon
-        variant="transparent"
-        size="lg"
-        aria-label="Toggle color scheme"
-        {...props}
-        onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
-      >
-        <ThemeIcon
-          size="lg"
-          variant="gradient"
-          gradient={
-            computedColorScheme === 'dark'
-              ? { from: 'orange', to: 'lime' }
-              : { from: 'blue', to: 'indigo' }
-          }
-        >
-          <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
-          <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
-        </ThemeIcon>
-      </ActionIcon>
-    </Group>
+    <button
+      onClick={toggle}
+      type="button"
+      className={`
+        inline-flex items-center justify-center
+        cursor-pointer
+        w-9 h-9 rounded-full p-0
+        transition-colors duration-300
+        appearance-none select-none
+        ${
+          colorScheme === 'light'
+            ? 'bg-yellow-100 hover:bg-yellow-200 text-yellow-700'
+            : 'bg-indigo-900 hover:bg-indigo-800 text-indigo-300'
+        }
+      `}
+    >
+      <div className="relative w-5 h-5">
+        {renderIcon(IconSun, colorScheme === 'light', 'text-yellow-600')}
+        {renderIcon(IconMoon, colorScheme === 'dark', 'text-indigo-300')}
+      </div>
+    </button>
   );
 };
 
