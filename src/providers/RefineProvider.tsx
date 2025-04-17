@@ -1,5 +1,3 @@
-import { authProvider } from '@/providers/auth-provider';
-import { useI18nProvider, useLocaleResources } from '@/i18n';
 import { Refine } from '@refinedev/core';
 import routerBindings, {
   DocumentTitleHandler,
@@ -8,6 +6,8 @@ import routerBindings, {
 import dataProvider from '@refinedev/simple-rest';
 import { FunctionComponent } from 'react';
 import { Outlet } from 'react-router-dom';
+import { useI18nProvider, useLocaleResources } from '@/i18n';
+import { authProvider } from '@/providers/auth-provider';
 import notificationProvider from './notification-provider';
 
 interface RefineProvidersProps {}
