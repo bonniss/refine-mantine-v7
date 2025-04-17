@@ -1,7 +1,7 @@
 {
   "name": "refine-mantine-v7",
   "private": true,
-  "version": "0.4.2",
+  "version": "0.5.0",
   "scripts": {
     "dev": "refine dev",
     "build": "tsc && refine build",
