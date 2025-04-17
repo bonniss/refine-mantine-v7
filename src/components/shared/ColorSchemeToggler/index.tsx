@@ -25,7 +25,7 @@ const ColorSchemeToggle: FunctionComponent<ColorSchemeToggleProps> = () => {
         ${color}
       `}
       stroke={2}
-      size={20} // ensures a consistent size
+      size={22}
     />
   );
 
@@ -36,6 +36,7 @@ const ColorSchemeToggle: FunctionComponent<ColorSchemeToggleProps> = () => {
       className={`
         inline-flex items-center justify-center
         cursor-pointer
+        opacity-90
         w-9 h-9 rounded-full p-0
         transition-colors duration-300
         appearance-none select-none

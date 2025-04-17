@@ -1,25 +1,24 @@
-import { Anchor, List, Text, ThemeIcon, Title, rem } from '@mantine/core';
-import { IconCircleCheck } from '@tabler/icons-react';
+import { Anchor, List, Text, ThemeIcon, Tooltip, rem } from '@mantine/core';
+import { IconBrandGithubFilled, IconCircleCheck } from '@tabler/icons-react';
 import WithTransition from '../shared/WithTransition';
-import classes from './Welcome.module.css';
 
 export function Welcome() {
   return (
     <WithTransition transition="fade-down">
-      <Title className={classes.title} ta="center" mt={100}>
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
+      <h1 className="text-center text-5xl md:text-7xl space-x-4 font-bold">
+        <span className="bg-gradient-to-tr from-10% from-pink-400 via-50% via-yellow-600 to-70% to-pink-500 bg-clip-text text-transparent">
           Refine
-        </Text>{' '}
-        <Text inherit variant="text" component="span">
-          +
-        </Text>{' '}
-        <Text inherit variant="gradient" component="span">
+        </span>
+        <span>
+          ❅
+        </span>
+        <span className="bg-gradient-to-tr from-10% from-blue-400 via-50% via-sky-600 to-70% to-blue-500 bg-clip-text text-transparent">
           Mantine
-        </Text>
-      </Title>
+        </span>
+      </h1>
       <div className="space-y-8 py-6">
         <section className="text-center flex flex-col gap-4">
-          <Text c="dimmed" component="span">
+          <span className="text-base">
             Refine&apos;s Mantine integration{' '}
             <Anchor
               target="_blank"
@@ -28,27 +27,35 @@ export function Welcome() {
               only supports Mantine v5
             </Anchor>
             .{' '}
-          </Text>
-          <p className="text-3xl">
+          </span>
+          <div className="text-2xl">
             This template is a combination of
             <br />
-            <Text
-              inherit
-              variant="gradient"
-              component="span"
-              gradient={{ from: 'pink', to: 'yellow' }}
+            <span
+              className="bg-gradient-to-tr from-10% from-pink-300 via-50% via-yellow-600 to-70% to-pink-500 bg-clip-text text-transparent"
             >
               Refine v4
-            </Text>{' '}
+            </span>
             <br />
-            <Text inherit variant="gradient" component="span">
+            <span
+              className="bg-gradient-to-tr from-10% from-blue-300 via-50% via-sky-600 to-70% to-blue-500 bg-clip-text text-transparent"
+            >
               Mantine v7
-            </Text>
+            </span>
             <br />
-            <span className="bg-gradient-to-tr from-10% from-fuchsia-200 via-50% via-purple-600 to-70% to-fuchsia-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-tr from-10% from-fuchsia-300 via-50% via-purple-600 to-70% to-fuchsia-500 bg-clip-text text-transparent">
               Tailwind v4
             </span>
-          </p>
+          </div>
+        </section>
+        <section className="text-center">
+          <a href="https://github.com/bonniss/refine-mantine-v7" target="_blank" rel="noreferrer">
+            <Tooltip label="View on GitHub" position="bottom" withArrow>
+              <ThemeIcon className="scale-105" size="xl" radius="xl" variant="light" color="dark">
+                <IconBrandGithubFilled className="w-8 h-8" />
+              </ThemeIcon>
+            </Tooltip>
+          </a>
         </section>
 
         <section className="space-y-4">
